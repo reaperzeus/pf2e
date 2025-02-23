@@ -21,40 +21,49 @@
             "title": "Pathfinder Player Core 2"
         },
         "rules": [
-            {
-                "effects": [
-                    {
-                        "affects": "allies",
-                        "includesSelf": false,
-                        "predicate": [
-                            {
-                                "not": "target:effect:shields-of-the-spirit-security"
-                            }
-                        ],
-                        "uuid": "Compendium.pf2e.spell-effects.Item.Spell Effect: Shields of the Spirit"
-                    }
-                ],
-                "key": "Aura",
-                "predicate": [
-                    "champions-aura",
-                    "self:signature:{item|origin.signature}"
-                ],
-                "radius": "@actor.flags.pf2e.champion.aura",
-                "slug": "champions-aura"
-            },
-            {
-                "hideIfDisabled": true,
-                "key": "FlatModifier",
-                "predicate": [
-                    {
-                        "not": "self:signature:{item|origin.signature}"
-                    }
-                ],
-                "selector": "ac",
-                "type": "status",
-                "value": 1
-            }
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "includesSelf": false,
+            "predicate": [
+              {
+                "not": "target:effect:shields-of-the-spirit-security"
+              }
+            ],
+            "uuid": "Compendium.pf2e.spell-effects.Item.mlvDokpnQBhvQrSk"
+          }
         ],
+        "key": "Aura",
+        "predicate": [
+          "champions-aura",
+          "self:signature:{item|origin.signature}"
+        ],
+        "radius": "@actor.flags.pf2e.champion.aura",
+        "slug": "champions-aura"
+      },
+      {
+        "hideIfDisabled": true,
+        "key": "FlatModifier",
+        "predicate": [
+          {
+            "not": "self:signature:{item|origin.signature}"
+          }
+        ],
+        "selector": "ac",
+        "type": "status",
+        "value": 1
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr",
+        "predicate": [
+          "self:signature:{item|origin.signature}"
+        ],
+        "allowDuplicate": false,
+        "reevaluateOnUpdate": true
+      }
+    ],
         "start": {
             "initiative": null,
             "value": 0
